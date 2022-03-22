@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">Challege3</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="go_to_screen_2">Go To Screen 2</string>
+    <string name="nama_kamu">Nama Kamu</string>
+    <string name="screen_three">Screen Three</string>
+    <string name="go_to_screen_3">go to screen 3</string>
+    <string name="screen_four">screen four</string>
+    <string name="umur_kamu">umur kamu</string>
+    <string name="pekerjaan_kamu">pekerjaan kamu</string>
+    <string name="go_to_screen_4">Go To Screen 4</string>
+    <string name="masukkan_usia_anda">Masukkan Usia Anda</string>
+    <string name="masukkan_alamat_anda">Masukkan Alamat Anda</string>
+    <string name="masukkan_pekerjaan_anda">Masukkan Pekerjaan Anda</string>
+</resources>
