@@ -5,9 +5,8 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context=".FragmentTiga">
-
         <TextView
-            android:id="@+id/edit_three"
+            android:id="@+id/tv_nama"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
@@ -20,44 +19,50 @@
             android:gravity="center"
             android:minHeight="0dp" />
         <TextView
-            android:id="@+id/edit_three2"
+            android:id="@+id/tv_biaya_tetap"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginStart="100dp"
-            android:layout_marginEnd="16dp"
-            android:hint="@string/umur_kamu"
+            android:hint="@string/biaya_tetap"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:background="@drawable/text_edit"
+            android:gravity="center"/>
+        <TextView
+            android:id="@+id/tv_harga_perunit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/harga_perunit"
             android:textSize="20dp"
             android:textStyle="bold"
             android:textColor="@color/black"
             android:gravity="center"/>
         <TextView
-            android:id="@+id/edit_three3"
-            android:layout_width="wrap_content"
+            android:id="@+id/tv_biaya_perunit"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginStart="130dp"
-            android:hint="@string/umur_kamu"
+            android:hint="@string/biaya_variabel_perunit"
             android:textSize="20dp"
             android:textStyle="bold"
             android:textColor="@color/black"
             android:gravity="center"/>
         <TextView
-            android:id="@+id/edit_three4"
-            android:layout_width="wrap_content"
+            android:id="@+id/tv_jumlah"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-           android:layout_marginStart="110dp"
-            android:hint="@string/pekerjaan_kamu"
+            android:hint="@string/total_biaya"
             android:textSize="20dp"
             android:textStyle="bold"
             android:textColor="@color/black"
             android:gravity="center"/>
         <Button
-            android:id="@+id/btn_two"
+            android:id="@+id/btn_three"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="4dp"
-            android:layout_marginStart="110dp"
             android:textAllCaps="false"
             android:text="@string/go_to_screen_4"
             android:textColor="@color/white"
+            android:layout_gravity="center"
             />
     </LinearLayout>

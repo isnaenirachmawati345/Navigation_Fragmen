@@ -9,13 +9,14 @@
     android:gravity="center"
     >
 
-
     <EditText
         android:id="@+id/edit_two"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:background="@drawable/text_edit"
         android:hint="@string/nama_kamu"
         android:inputType="text"
+        android:gravity="center"
         android:minHeight="48dp" />
     <Button
         android:id="@+id/btn_two"

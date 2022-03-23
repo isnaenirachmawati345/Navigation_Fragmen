@@ -11,6 +11,10 @@ import com.example.challege3.databinding.FragmentKeduaBinding
 
 
 class FragmentKedua : Fragment() {
+    companion object{
+        const val EXTRA_NAME = "NAME"
+
+    }
     private var _binding: FragmentKeduaBinding? = null
     private val binding get() = _binding!!
     override fun onCreateView(
@@ -24,8 +28,15 @@ class FragmentKedua : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         binding.btnTwo.setOnClickListener {
-            val edittext = FragmentKeduaDirections.actionFragmentKeduaToFragmentTiga(binding.editTwo.text.toString())
-            it.findNavController().navigate(edittext)
+            if (binding.editTwo.text.isNotEmpty()){
+                //UNTUK MENGIRIMKAN DATA PAKAI BUNDLE
+                val bundle = Bundle().apply {
+                    putString(EXTRA_NAME, binding.editTwo.text.toString())
+                }
+                it.findNavController().navigate(R.id.action_fragmentKedua_to_fragmentTiga,bundle)
+
+            }
+
 
         }
     }

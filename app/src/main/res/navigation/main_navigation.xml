@@ -28,28 +28,16 @@
         android:name="com.example.challege3.FragmentTiga"
         android:label="fragment_tiga"
         tools:layout="@layout/fragment_tiga" >
-        <action
-            android:id="@+id/action_fragmentTiga_to_fragmentKedua"
-            app:destination="@id/fragmentKedua" />
         <argument
             android:name="name"
             app:argType="string"
             android:defaultValue="Masukan Ulang" />
         <action
-            android:id="@+id/action_fragmentTiga_to_fragmentEmpat3"
+            android:id="@+id/action_fragmentTiga_to_fragmentEmpat"
             app:destination="@id/fragmentEmpat3" />
         <argument
-            android:name="age"
-            app:argType="integer"
-            android:defaultValue="0" />
-        <argument
-            android:name="address"
-            app:argType="string"
-            android:defaultValue="salah" />
-        <argument
-            android:name="job"
-            app:argType="string"
-            android:defaultValue="masukan lagi" />
+            android:name="biaya"
+            app:argType="com.example.challege3.lainnya" />
     </fragment>
     <fragment
         android:id="@+id/fragmentEmpat3"
@@ -59,6 +47,9 @@
         <action
             android:id="@+id/action_fragmentEmpat3_to_fragmentTiga"
             app:destination="@id/fragmentTiga" />
+        <argument
+            android:name="nama"
+            app:argType="string" />
     </fragment>
 
 </navigation>

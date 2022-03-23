@@ -6,27 +6,31 @@
     android:orientation="vertical"
     tools:context=".FragmentEmpat">
         <EditText
-            android:id="@+id/et_age"
-            android:hint="@string/masukkan_usia_anda"
+            android:id="@+id/et_biaya_tetap"
+            android:hint="@string/biaya_tetap"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
             android:layout_marginTop="250dp"
             android:layout_marginEnd="16dp"
+            android:background="@drawable/text_edit"
             />
         <EditText
-            android:id="@+id/et_address"
-            android:hint="@string/masukkan_alamat_anda"
+            android:id="@+id/et_harga_perunit"
+            android:hint="@string/harga_perunit"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:background="@drawable/text_edit"
             android:layout_marginEnd="16dp"
             android:layout_marginStart="16dp"/>
         <EditText
-            android:id="@+id/et_job"
-            android:hint="@string/masukkan_pekerjaan_anda"
+            android:id="@+id/et_biaya_variabel"
+            android:hint="@string/biaya_variabel_perunit"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:background="@drawable/text_edit"
            />
         <Button
             android:id="@+id/btn_four"
@@ -34,7 +38,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="4dp"
-            android:layout_marginStart="110dp"
+            android:layout_marginStart="130dp"
             android:textAllCaps="false"
             />
 </LinearLayout>
