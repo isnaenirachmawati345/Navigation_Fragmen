@@ -26,19 +26,30 @@ class FragmentTiga : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        val myName = arguments?.getString(FragmentKedua.EXTRA_NAME)
-        binding.tvNama.text= myName
+        //menerima dengan dari bundel pake argumen
+       // val myName = arguments?.getString(FragmentKedua.EXTRA_NAME)
+        //binding.tvNama.text= myName
         //menerima data fragmen 4 untuk menampilkan di xml
-        binding.tvBiayaTetap.text=args.biaya.biaya_tetap.toString()
-        binding.tvHargaPerunit.text=args.biaya.harga_perunit.toString()
-        binding.tvBiayaPerunit.text=args.biaya.biaya_variabel_perunit.toString()
+        val nama = args.name
         val biaya = args.biaya
         //untuk menghitung
-        val bep = biaya.biaya_tetap/(biaya.harga_perunit-biaya.biaya_variabel_perunit)
-        binding.tvJumlah.text = bep.toString()
+        if (biaya==null){
+            binding.tvJumlah.visibility = View.GONE
+            binding.tvBiayaTetap.visibility = View.GONE
+            binding.tvHargaPerunit.visibility = View.GONE
+            binding.tvBiayaPerunit.visibility = View.GONE
+            binding.tvNama.text = nama
+        }else{
+            val bep = biaya.biaya_tetap/(biaya.harga_perunit-biaya.biaya_variabel_perunit)
+            binding.tvJumlah.text = bep.toString()
+            binding.tvBiayaTetap.text=biaya.biaya_tetap.toString()
+            binding.tvHargaPerunit.text=biaya.harga_perunit.toString()
+            binding.tvBiayaPerunit.text=biaya.biaya_variabel_perunit.toString()
+            binding.tvNama.text = nama
+        }
         binding.btnThree.setOnClickListener {
                 //kirim nama ke fragmen empat
-                var send = FragmentTigaDirections.actionFragmentTigaToFragmentEmpat(myName.toString())
+                var send = FragmentTigaDirections.actionFragmentTigaToFragmentEmpat(nama)
                 it.findNavController().navigate(send)
         }
     }

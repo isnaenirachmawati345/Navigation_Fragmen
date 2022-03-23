@@ -30,10 +30,11 @@ class FragmentKedua : Fragment() {
         binding.btnTwo.setOnClickListener {
             if (binding.editTwo.text.isNotEmpty()){
                 //UNTUK MENGIRIMKAN DATA PAKAI BUNDLE
-                val bundle = Bundle().apply {
-                    putString(EXTRA_NAME, binding.editTwo.text.toString())
-                }
-                it.findNavController().navigate(R.id.action_fragmentKedua_to_fragmentTiga,bundle)
+//                val bundle = Bundle().apply {
+//                    putString(EXTRA_NAME, binding.editTwo.text.toString())
+//                }
+             val fragmenduaKetiga = FragmentKeduaDirections.actionFragmentKeduaToFragmentTiga(binding.editTwo.text.toString(),null)
+                it.findNavController().navigate(fragmenduaKetiga)
 
             }
 

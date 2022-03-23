@@ -31,13 +31,14 @@
         <argument
             android:name="name"
             app:argType="string"
-            android:defaultValue="Masukan Ulang" />
+            app:nullable="true" />
         <action
             android:id="@+id/action_fragmentTiga_to_fragmentEmpat"
             app:destination="@id/fragmentEmpat3" />
         <argument
             android:name="biaya"
-            app:argType="com.example.challege3.lainnya" />
+            app:argType="com.example.challege3.lainnya"
+            app:nullable="true" />
     </fragment>
     <fragment
         android:id="@+id/fragmentEmpat3"
@@ -49,7 +50,8 @@
             app:destination="@id/fragmentTiga" />
         <argument
             android:name="nama"
-            app:argType="string" />
+            app:argType="string"
+            app:nullable="true" />
     </fragment>
 
 </navigation>

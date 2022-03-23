@@ -13,11 +13,7 @@ class FragmentEmpat : Fragment() {
     private lateinit var binding: FragmentEmpatBinding
     //untuk menerima data nama dari fragmen 3
     val args : FragmentEmpatArgs by navArgs()
-    companion object {
-        val BIAYA_VARIABEL         = "BIAYA_VARIABEL"
-        val HARGA_PERUNIT          = "HARGA_PERUNIT"
-        val HARGA_VARIABEL_PERUNIT = "HARGA_VARIABEL_PERUNIT"
-    }
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -28,12 +24,14 @@ class FragmentEmpat : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        //menerima nama
+        val name = args.nama
         binding.btnFour.setOnClickListener {
             val biayaVariable = binding.etBiayaVariabel.text.toString().toDouble()
             val biayaTetap = binding.etBiayaTetap.text.toString().toDouble()
             val hargaPerunit = binding.etHargaPerunit.text.toString().toDouble()
             val biaya = lainnya(biayaTetap,hargaPerunit,biayaVariable)
-            val editText = FragmentEmpatDirections.actionFragmentEmpat3ToFragmentTiga(args.nama, biaya)
+            val editText = FragmentEmpatDirections.actionFragmentEmpat3ToFragmentTiga(name, biaya)
             it.findNavController().navigate(editText)
         }
     }
