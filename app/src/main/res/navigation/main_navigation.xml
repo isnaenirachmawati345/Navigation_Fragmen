@@ -30,15 +30,13 @@
         tools:layout="@layout/fragment_tiga" >
         <argument
             android:name="name"
-            app:argType="string"
-            app:nullable="true" />
+            app:argType="string" />
         <action
             android:id="@+id/action_fragmentTiga_to_fragmentEmpat"
             app:destination="@id/fragmentEmpat3" />
         <argument
             android:name="biaya"
-            app:argType="com.example.challege3.lainnya"
-            app:nullable="true" />
+            app:argType="com.example.challege3.input" />
     </fragment>
     <fragment
         android:id="@+id/fragmentEmpat3"
@@ -50,8 +48,7 @@
             app:destination="@id/fragmentTiga" />
         <argument
             android:name="nama"
-            app:argType="string"
-            app:nullable="true" />
+            app:argType="string" />
     </fragment>
 
 </navigation>

@@ -11,13 +11,13 @@ import com.example.challege3.databinding.FragmentEmpatBinding
 
 class FragmentEmpat : Fragment() {
     private lateinit var binding: FragmentEmpatBinding
-    //untuk menerima data nama dari fragmen 3
+    //untuk menerima data nama dari fragmen 3 menggunakan argumen
     val args : FragmentEmpatArgs by navArgs()
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         binding = FragmentEmpatBinding.inflate(layoutInflater)
         return binding.root
     }
@@ -30,8 +30,8 @@ class FragmentEmpat : Fragment() {
             val biayaVariable = binding.etBiayaVariabel.text.toString().toDouble()
             val biayaTetap = binding.etBiayaTetap.text.toString().toDouble()
             val hargaPerunit = binding.etHargaPerunit.text.toString().toDouble()
-            val biaya = lainnya(biayaTetap,hargaPerunit,biayaVariable)
-            val editText = FragmentEmpatDirections.actionFragmentEmpat3ToFragmentTiga(name, biaya)
+            val biaya = input(biayaTetap,hargaPerunit,biayaVariable)
+            val editText = FragmentEmpatDirections.actionFragmentEmpat3ToFragmentTiga(name,biaya)//parcelable
             it.findNavController().navigate(editText)
         }
     }
