@@ -27,10 +27,10 @@ class FragmentEmpat : Fragment() {
         //menerima nama
         val name = args.nama
         binding.btnFour.setOnClickListener {
-            val biayaVariable = binding.etBiayaVariabel.text.toString().toDouble()
-            val biayaTetap = binding.etBiayaTetap.text.toString().toDouble()
-            val hargaPerunit = binding.etHargaPerunit.text.toString().toDouble()
-            val biaya = input(biayaTetap,hargaPerunit,biayaVariable)
+            val biayaTetap = binding.etBiayaTetap.text.toString().toInt()
+            val hargaPerunit = binding.etHargaPerunit.text.toString().toInt()
+            val biayaVariable = binding.etBiayaVariabel.text.toString().toInt()
+            val biaya = input(biayaTetap,biayaVariable,hargaPerunit)
             val editText = FragmentEmpatDirections.actionFragmentEmpat3ToFragmentTiga(name,biaya)//parcelable
             it.findNavController().navigate(editText)
         }

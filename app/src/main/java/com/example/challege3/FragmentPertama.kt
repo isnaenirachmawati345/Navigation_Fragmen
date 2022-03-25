@@ -23,7 +23,7 @@ class FragmentPertama : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         binding.btnScreenone.setOnClickListener {
             //untuk menyambungkan fragmen 1 ke 2
-            it.findNavController().navigate(R.id.action_fragmenPertama2_to_fragmentKedua)
+                it.findNavController().navigate(R.id.action_fragmenPertama2_to_fragmentKedua)
         }
     }
     override fun onDestroy() {

@@ -28,16 +28,9 @@ class FragmentKedua : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         binding.btnTwo.setOnClickListener {
             if (binding.editTwo.text.isNotEmpty()){
-                //UNTUK MENGIRIMKAN DATA PAKAI BUNDLE
-//                val bundle = Bundle().apply {
-//                    putString(EXTRA_NAME, binding.editTwo.text.toString())
-//                }
-             val fragmenduaKetiga = FragmentKeduaDirections.actionFragmentKeduaToFragmentTiga(binding.editTwo.text.toString(),input(0.0,0.0,0.0))//kirim kefragmen 3
+             val fragmenduaKetiga = FragmentKeduaDirections.actionFragmentKeduaToFragmentTiga(binding.editTwo.text.toString(),input(0,0,0))//kirim kefragmen 3
                 it.findNavController().navigate(fragmenduaKetiga)
-
             }
-
-
         }
     }
     override fun onDestroy() {

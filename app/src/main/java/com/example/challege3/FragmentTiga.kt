@@ -31,18 +31,18 @@ class FragmentTiga : Fragment() {
         val nama = args.name
         //menerima data fragmen 4 untuk menampilkan di xml
         val biaya = args.biaya
-        if (biaya.biaya_tetap == 0.0){
+        if (biaya.biaya_tetap == 0){
             binding.tvJumlah.visibility = View.GONE//kondisi untuk menghilangkan jumlah dll saat frag 2 kirim frag 3
             binding.tvBiayaTetap.visibility = View.GONE
             binding.tvHargaPerunit.visibility = View.GONE
             binding.tvBiayaPerunit.visibility = View.GONE
             binding.tvNama.text = nama
         }else{
-            val bep = biaya.biaya_tetap/(biaya.harga_perunit-biaya.biaya_variabel_perunit)//untuk menghitung
-            binding.tvJumlah.text = "total semuanya ${bep.toString()}"
-           binding.tvBiayaTetap.text = "masukan kuy : ${biaya.biaya_tetap.toString()}"
-            binding.tvHargaPerunit.text="masukan harga : ${biaya.harga_perunit.toString()}"
-            binding.tvBiayaPerunit.text="masukan biaya : ${biaya.biaya_variabel_perunit.toString()}"
+            val bep = biaya.biaya_tetap/(biaya.biaya_variabel_perunit-biaya.harga_perunit)//untuk menghitung
+            binding.tvJumlah.text = "Total Break Even Point :  Rp.${bep.toString().toInt()}"
+           binding.tvBiayaTetap.text = "Biaya Tetap Sebanyak : Rp.${biaya.biaya_tetap.toString().toInt()}"
+            binding.tvBiayaPerunit.text="Biaya Per-Unit Sebanyak : Rp.${biaya.biaya_variabel_perunit.toString().toInt()}"
+            binding.tvHargaPerunit.text="Harga Per-Unit Sebanyak : Rp.${biaya.harga_perunit.toString().toInt()}"
             binding.btnThree.visibility = View.GONE//UNTUK MENGHILANGKAN BOTTOM SAAT FRAGMEN 4 KE 3
             binding.tvNama.text = nama
         }
@@ -56,6 +56,15 @@ class FragmentTiga : Fragment() {
         super.onDestroy()
         _binding = null
     }
+//    private fun currency(angka: Int): String {
+//        val kursIndonesia = DecimalFormat.getCurrencyInstance() as DecimalFormat
+//        val formatRp = DecimalFormatSymbols()
+//        formatRp.currencySymbol = "Rp "
+//        formatRp.monetaryDecimalSeparator = ','
+//        formatRp.groupingSeparator = '.'
+//        kursIndonesia.decimalFormatSymbols = formatRp
+//        return kursIndonesia.format(angka)
+ //   }
 
 
 

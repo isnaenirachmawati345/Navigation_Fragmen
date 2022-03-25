@@ -7,8 +7,25 @@
     tools:context=".FragmentPertama"
     android:gravity="center"
     android:id="@+id/fragmentPertama">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/masuk_hitung_bep_friendly_shop"
+        android:gravity="center"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:textSize="20dp"
+        android:minHeight="45dp"
+        android:layout_marginBottom="23dp"
+        />
 
-
+    <ImageButton
+        android:layout_width="370dp"
+        android:layout_height="266dp"
+        android:layout_marginBottom="23dp"
+        android:background="@drawable/img"
+        android:scaleX="0.6"
+        android:scaleY="0.5" />
     <Button
         android:id="@+id/btn_screenone"
         android:layout_width="wrap_content"

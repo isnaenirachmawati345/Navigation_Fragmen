@@ -9,6 +9,34 @@
     android:gravity="center"
     >
 
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:minHeight="45dp"
+        android:text="@string/masuk_hitung_bep_friendly_shop"
+        android:textColor="@color/black"
+        android:textSize="20dp"
+        android:textStyle="bold" />
+
+    <ImageButton
+        android:layout_width="match_parent"
+        android:layout_height="340dp"
+        android:background="@drawable/img"
+        android:scaleX="0.6"
+        android:scaleY="0.5"
+        android:layout_marginBottom="23dp"
+        />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/silahkan_masukan_nama_anda"
+        android:gravity="center"
+        android:textSize="20dp"
+        android:textColor="@color/black"
+        android:layout_marginBottom="12dp"
+        />
+
     <EditText
         android:id="@+id/edit_two"
         android:layout_width="match_parent"
