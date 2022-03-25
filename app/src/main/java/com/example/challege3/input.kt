@@ -5,7 +5,7 @@ import kotlinx.parcelize.Parcelize
 
 @Parcelize
 data class input(
-    val biaya_tetap: Int,//ada isinya
-    val harga_perunit: Int,
-    val biaya_variabel_perunit: Int
+    val biayaTetap: Int,//ada isinya
+    val hargaPerunit: Int,
+    val biayaVariabelPerunit: Int
 ): Parcelable
