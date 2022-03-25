@@ -14,7 +14,7 @@ class FragmentTiga : Fragment() {
     private  var _binding: FragmentTigaBinding? = null
     private val binding get() = _binding!!
     //menyimpn fragmen 4
-    val args: FragmentTigaArgs by navArgs()
+    private val args: FragmentTigaArgs by navArgs()
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
